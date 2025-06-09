@@ -9,6 +9,7 @@ This is the backend API for the YouTube Clone project, built with Node.js, Expre
 - Comments, likes, subscriptions
 - Notifications
 - RESTful API
+- Cloudinary integration for media uploads
 
 ## Getting Started
 
@@ -16,6 +17,7 @@ This is the backend API for the YouTube Clone project, built with Node.js, Expre
 
 - Node.js (v16+ recommended)
 - MongoDB Atlas account
+- Cloudinary account (for media uploads)
 
 ### Installation
 
@@ -30,11 +32,19 @@ This is the backend API for the YouTube Clone project, built with Node.js, Expre
    npm install
    ```
 
-3. Create a `.env` file in the root with the following:
+3. Create a `.env` file in the root with the following variables:
    ```
    MONGODB_URI=your_mongodb_atlas_connection_string
+   PORT=5000
    JWT_SECRET=your_jwt_secret
+   CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+   CLOUDINARY_API_KEY=your_cloudinary_api_key
+   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
    ```
+
+   > **Note:**  
+   > Replace the values above with your actual credentials.  
+   > Do **not** commit your `.env` file to version control.
 
 4. Start the server:
    ```
@@ -44,7 +54,7 @@ This is the backend API for the YouTube Clone project, built with Node.js, Expre
 ## Deployment
 
 - Deploy on [Render](https://render.com/) or similar Node.js hosting.
-- Set environment variables (`MONGODB_URI`, `JWT_SECRET`) in your hosting dashboard.
+- Set all environment variables (`MONGODB_URI`, `PORT`, `JWT_SECRET`, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`) in your hosting dashboard.
 
 ## API Endpoints
 
